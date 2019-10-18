@@ -19,11 +19,12 @@ export default class App extends Component {
     const { username } = this.state
     return (
       <div className="home-screen">
-        {username ? (
+        {/* {username ? (
           <h1>{`Hello ${username}`}</h1>
         ) : (
           <h1>Loading.. please wait!</h1>
-        )}
+        )} */}
+        <h1 />
         <img src={regulusStarImage} alt="Regulus" />
         <div className="info introduction">
           <div className="pallete logo">
