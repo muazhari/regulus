@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "engines": {
-    "node": ">=10.x"
+    "node": "12.8.0"
   },
   "author": "kelompok-2-prap",
   "license": "ISC",
