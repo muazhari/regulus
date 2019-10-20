@@ -1,0 +1,116 @@
+.footer-component {
+  padding-inline-start: 2%;
+  padding-inline-end: 2%;
+  /* padding-block-start: 2%;
+  padding-block-end: 2%; */
+  margin-block-start: 5%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.158);
+}
+
+@media screen and (overflow: scroll) {
+  .footer-component {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media not screen and (overflow-block: scroll) {
+  .footer-component {
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-component {
+    display: inline-flexbox;
+  }
+  .footer-component .image {
+    width: 0;
+  }
+  .footer-component .logo {
+    padding: 2%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer-component {
+    display: flex;
+  }
+  .footer-component .image {
+    max-width: 18%;
+  }
+  .footer-component .logo {
+    /* padding: 2%; */
+  }
+}
+
+.footer-component .navigation {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-component .nav-link {
+  text-decoration: none;
+  display: flex;
+  flex: 1;
+  font-size: medium;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-component .nav-link {
+  background-color: white;
+  color: rgb(52, 186, 190)
+}
+
+.footer-component .nav-link:hover {
+  color: white;
+  background-color: rgb(52, 186, 190)
+}
+
+.footer-component .nav-link:active {
+  color: white;
+  background-color: rgb(52, 186, 190)
+}
+
+.footer-component .logo {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-component .logo .image {
+  display: flex;
+  flex: 1;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+}
+
+.footer-component .logo .text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.footer-component .logo .text .main {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.footer-component .logo .text .sub {
+  font-weight: normal;
+  font-size: medium;
+}

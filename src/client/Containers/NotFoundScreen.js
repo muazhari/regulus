@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 
+import './Styles/NotFoundScreenStyle.css'
+
 class NotFoundComponent extends Component {
   render() {
-    return <h1>404 - Sorry this page is not found</h1>
+    return (
+      <div className="not-found-screen">
+        <h1>404 - Sorry this page is not found</h1>
+      </div>
+    )
   }
 }
 
