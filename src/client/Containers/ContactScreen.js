@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Styles/contactScreenStyle.css'
+import './Styles/ContactScreenStyle.css'
 import ReactImage from '../Assets/react.png'
 import regulusStarImage from '../Assets/regulusStar.jpg'
 
