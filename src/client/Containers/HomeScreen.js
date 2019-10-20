@@ -27,16 +27,15 @@ export default class App extends Component {
           <h1>Loading.. please wait!</h1>
         )} */}
         <div className="image cover">
-          <img className="banner" src={regulusStarImage} alt="Regulus" />
+          <img
+            src="https://miro.medium.com/max/10080/1*bvfNJpysOtpWCnr3hZbtSA.jpeg"
+            alt="banner"
+          />
         </div>
 
         <div className="flex-container introduction" id="what-is-regulus">
           <div className="flex-cell col-6 image">
-            <img
-              className="regulus-logo"
-              src={regulusLogo}
-              alt="Regulus Logo"
-            />
+            <img src={regulusLogo} alt="regulus" />
           </div>
           <div className="flex-cell col-6 description">
             <text className="main">What is Regulus</text>
@@ -59,9 +58,8 @@ export default class App extends Component {
           </div>
           <div className="flex-cell col-6 image">
             <img
-              className="regulus-logo"
-              src={regulusLogo}
-              alt="Regulus Logo"
+              src="https://s3.amazonaws.com/ellevate-app-uploads-production/blog_posts/7542/featured_image/large/07.19.2016.elle.jpg?1468961151"
+              alt="vision"
             />
           </div>
         </div>
@@ -69,9 +67,10 @@ export default class App extends Component {
         <div className="flex-container introduction" id="mission">
           <div className="flex-cell col-6 image">
             <img
-              className="regulus-logo"
-              src={regulusLogo}
-              alt="Regulus Logo"
+              width="500"
+              height="500"
+              src="http://startupsnepal.com/images/easyblog_images/186/Entrepreneurs-brainstorming-in-The-Library-a-municipal-coworking-space.-Photo-courtesy-of-the-Tel-Aviv-municipality-2-1168x657.jpg"
+              alt="mission"
             />
           </div>
           <div className="flex-cell col-6 description">

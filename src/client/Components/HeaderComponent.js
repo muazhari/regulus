@@ -10,22 +10,20 @@ class HeaderComponent extends Component {
     return (
       <div className="header-component">
         <div className="logo">
-          <div className="image logo">
-            <img className="regulus-logo" src={regulusLogo} alt="Regulus" />
-          </div>
+          <img src={regulusLogo} alt="Regulus" />
           <div className="description">
             <text className="main">Regulus</text>
             <text className="sub">Collaboration in motion</text>
           </div>
         </div>
         <div className="navigation">
-          <NavLink className="nav-link" to="/">
+          <NavLink className="NavLink" to="/">
             <h4>Home</h4>
           </NavLink>
-          <NavLink className="nav-link" to="/about">
+          <NavLink className="NavLink" to="/about">
             <h4>About</h4>
           </NavLink>
-          <NavLink className="nav-link" to="/article">
+          <NavLink className="NavLink" to="/article">
             <h4>Article</h4>
           </NavLink>
         </div>

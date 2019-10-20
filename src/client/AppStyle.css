@@ -120,6 +120,74 @@ body {
     height: 500px;
 }
 
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2%;
+    resize: vertical;
+}
+
+label {
+    padding: 0 0 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: rgb(52, 186, 190);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(48, 172, 177)
+}
+
+.carousel {
+    padding: 0 30px;
+}
+
+.carousel-button-prev, .carousel-button-next {
+    display: flex;
+    flex: 1;
+}
+
+.carousel-button-prev {
+    justify-content: flex-start;
+}
+
+.carousel-button-next {
+    justify-content: flex-end;
+}
+
+.carousel-container {
+    overflow: hidden;
+    height: 200px;
+}
+
+.carousel-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel-list.unwrap {
+    flex-wrap: nowrap;
+}
+
+.carousel-item {
+    flex: 1 0 250px;
+    /* max-width: 300px; */
+    height: 200px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #fff;
+}
+
 @font-face {
     font-family: 'proxima_nova_alt_rgbold';
     src: url('Assets/Fonts/proxima_nova_alt_bold-webfont.woff2') format('woff2'), url('Assets/Fonts/proxima_nova_alt_bold-webfont.woff') format('woff');
