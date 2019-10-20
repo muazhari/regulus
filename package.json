@@ -10,6 +10,9 @@
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "engines": {
+    "node": ">=10.3.0"
+  },
   "author": "kelompok-2-prap",
   "license": "ISC",
   "dependencies": {
