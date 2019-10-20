@@ -10,7 +10,7 @@ class HeaderComponent extends Component {
     return (
       <div className="header-component">
         <div className="logo">
-          <div className="image ">
+          <div className="image logo">
             <img className="regulus-logo" src={regulusLogo} alt="Regulus" />
           </div>
           <div className="description">

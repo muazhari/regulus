@@ -40,7 +40,9 @@
   align-items: center;
 }
 
-.header-component .logo .image {
+.header-component .image.logo {
+  display: flex;
+  flex: 1;
   justify-content: flex-start;
   align-items: flex-start;
 }

@@ -49,10 +49,12 @@ export default class App extends Component {
 
         <div className="flex-container introduction" id="vision">
           <div className="flex-cell col-6 description">
-            <text className="main">What is Regulus</text>
+            <text className="main">Vision</text>
             <text className="sub">
-              Regulus is an project apprentice group, that aims to foster
-              students interests and talent in technology.
+              Membantu generasi muda meningkatkan kreatifitas, keaktifan, serta
+              sifat inovatif, dan produktif dalam bidang teknologi dan dapat
+              menjadi manusia yang lebih berbakti, teladan serta bermanfaat bagi
+              masyarakat
             </text>
           </div>
           <div className="flex-cell col-6 image">
@@ -73,11 +75,34 @@ export default class App extends Component {
             />
           </div>
           <div className="flex-cell col-6 description">
-            <text className="main">What is Regulus</text>
-            <text className="sub">
-              Regulus is an project apprentice group, that aims to foster
-              students interests and talent in technology.
-            </text>
+            <text className="main">Mission</text>
+
+            <ol>
+              <li>
+                <text className="sub">
+                  Membuat program kegiatan yang mengasah kreatifitas dan
+                  membangun kemandirian
+                </text>
+              </li>
+              <li>
+                <text className="sub">
+                  Mengembangkan rasa sosial, tanggung jawab, dan saling
+                  menghargai antar anggota.
+                </text>
+              </li>
+              <li>
+                <text className="sub">
+                  Memperluas jaringan koneksi untuk mendapatkan lebih banyak
+                  pengetahuan.
+                </text>
+              </li>
+              <li>
+                <text className="sub">
+                  Membantu anggota dengan memberika pondasi yang cukup untuk
+                  mereka kedepannya
+                </text>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
