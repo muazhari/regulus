@@ -39,16 +39,23 @@
 
 /* ---------------- */
 
+.header-component .logo #img-nav {
+  display: contents;
+}
+
 .header-component .logo {
   display: flex;
   flex: 2;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
+  color: black;
 }
 
 .header-component .logo img {
   border-radius: 3%;
   padding: 1%;
+  margin: 0
 }
 
 .header-component .logo .description {

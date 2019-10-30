@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.158);
+  height: 11vh;
 }
 
 @media screen and (overflow: scroll) {

@@ -17,7 +17,7 @@ class FooterComponent extends Component {
         </div>
         <div className="navigation">
           <NavLink className="nav-link" to="/contact">
-            <h4>Contact Us</h4>
+            <h4>regulusprap@gmail.com</h4>
           </NavLink>
         </div>
       </div>

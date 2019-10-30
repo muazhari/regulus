@@ -1,36 +1,97 @@
 import React, { Component } from 'react'
 import './Styles/HomeScreenStyle.css'
-import ReactImage from '../Assets/react.png'
+import { Carousel } from 'react-responsive-carousel'
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+  Image,
+} from 'pure-react-carousel'
+
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+
 import regulusStarImage from '../Assets/regulusStar.jpg'
 
 import regulusLogo from '../Assets/Images/regulus-logo.jpg'
+import regulusBanner from '../Assets/Images/banner.jpg'
+import clarence from '../Assets/Images/clarence.jpg'
+import kharisma from '../Assets/Images/kharisma.jpg'
+import shane from '../Assets/Images/shane.jpg'
+import riyanto from '../Assets/Images/riyanto.jpg'
+import jason from '../Assets/Images/jason.jpg'
+import karen from '../Assets/Images/karen.jpg'
+import michael from '../Assets/Images/michael.jpg'
+
+import carlos from '../Assets/Images/carlos.jpg'
+
+import 'pure-react-carousel/dist/react-carousel.es.css'
+
+const teamProfile = (index, image, name, quote) => {
+  return (
+    <Slide className="slide" index={index}>
+      <div className="image">
+        <img src={image} alt="profile" />
+      </div>
+      <div className="description">
+        <text className="name">{name}</text>
+        <text className="quote">{quote}</text>
+      </div>
+    </Slide>
+  )
+}
 
 export default class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { username: null }
-  }
-
-  componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }))
+    this.state = {}
   }
 
   render() {
-    const { username } = this.state
+    const teamData = [
+      {
+        image: clarence,
+        name: 'Clarence',
+        quote: 'halloo',
+      },
+      {
+        image: michael,
+        name: 'Michael',
+        quote: 'halloo',
+      },
+      {
+        image: karen,
+        name: 'Karen',
+        quote: 'halloo',
+      },
+      {
+        image: kharisma,
+        name: 'Kharisma',
+        quote: 'halloo',
+      },
+      { image: shane, name: 'Shane', quote: 'halloo' },
+      {
+        image: riyanto,
+        name: 'Riyanto',
+        quote: 'halloo',
+      },
+      {
+        image: jason,
+        name: 'Jason',
+        quote: 'halloo',
+      },
+      {
+        image: carlos,
+        name: 'Carlos',
+        quote: 'halloo',
+      },
+    ]
+
     return (
-      <div className="home-screen">
-        {/* {username ? (
-          <h1>{`Hello ${username}`}</h1>
-        ) : (
-          <h1>Loading.. please wait!</h1>
-        )} */}
+      <div id="home-screen">
         <div className="image cover">
-          <img
-            src="https://miro.medium.com/max/10080/1*bvfNJpysOtpWCnr3hZbtSA.jpeg"
-            alt="banner"
-          />
+          <img src={regulusBanner} alt="banner" />
         </div>
 
         <div className="flex-container introduction" id="what-is-regulus">
@@ -50,10 +111,8 @@ export default class App extends Component {
           <div className="flex-cell col-6 description">
             <text className="main">Vision</text>
             <text className="sub">
-              Membantu generasi muda meningkatkan kreatifitas, keaktifan, serta
-              sifat inovatif, dan produktif dalam bidang teknologi dan dapat
-              menjadi manusia yang lebih berbakti, teladan serta bermanfaat bagi
-              masyarakat
+              Sebuah kelompok yang mengedepankan sikap disiplin dan mampu
+              menduduki posisi teratas dalam masa Project Apprentice.
             </text>
           </div>
           <div className="flex-cell col-6 image">
@@ -79,30 +138,51 @@ export default class App extends Component {
             <ol>
               <li>
                 <text className="sub">
-                  Membuat program kegiatan yang mengasah kreatifitas dan
-                  membangun kemandirian
+                  Menerapkan sistem kerja yang fleksibel dimana setiap anggota
+                  kelompok bisa membantu pekerjaan sesama anggota,
                 </text>
               </li>
               <li>
                 <text className="sub">
-                  Mengembangkan rasa sosial, tanggung jawab, dan saling
-                  menghargai antar anggota.
+                  Melaksanakan kegiatan-kegiatan di dalam Project Apprentice
+                  dengan tepat waktu,
                 </text>
               </li>
               <li>
                 <text className="sub">
-                  Memperluas jaringan koneksi untuk mendapatkan lebih banyak
-                  pengetahuan.
-                </text>
-              </li>
-              <li>
-                <text className="sub">
-                  Membantu anggota dengan memberika pondasi yang cukup untuk
-                  mereka kedepannya
+                  Mengerjakan Project Apprentice dengan maksimal, yang dimana
+                  pada QC ke-3, tidak terlihat kesalahan yang berarti.
                 </text>
               </li>
             </ol>
           </div>
+        </div>
+
+        <div id="our-team">
+          <div className="title">
+            <h1>Our team</h1>
+          </div>
+          <CarouselProvider
+            className="carousel"
+            naturalSlideWidth={100}
+            naturalSlideHeight={37}
+            totalSlides={teamData.length}
+          >
+            <ButtonBack className="button-back">
+              <IoIosArrowBack />
+              Back
+            </ButtonBack>
+            <Slider className="slider">
+              {teamData &&
+                teamData.map((data, i) =>
+                  teamProfile(i, data.image, data.name, data.quote)
+                )}
+            </Slider>
+            <ButtonNext className="button-next">
+              Next
+              <IoIosArrowForward />
+            </ButtonNext>
+          </CarouselProvider>
         </div>
       </div>
     )
