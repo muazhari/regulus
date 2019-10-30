@@ -9,6 +9,9 @@ import ArticleScreen from './Containers/ArticleScreen'
 import QuoteScreen from './Containers/QuoteScreen'
 import ContactScreen from './Containers/ContactScreen'
 
+import ArticleBisnisScreen from './Containers/ArticleBisnisScreen'
+import ArticleTeknologiScreen from './Containers/ArticleTeknologiScreen'
+
 import NotFoundScreen from './Containers/NotFoundScreen'
 
 import './AppStyle.css'
@@ -25,6 +28,16 @@ class App extends Component {
             <Route exact path="/article" component={ArticleScreen} />
             <Route exact path="/quote" component={QuoteScreen} />
             <Route exact path="/contact" component={ContactScreen} />
+            <Route
+              exact
+              path="/article/bisnis-online"
+              component={ArticleBisnisScreen}
+            />
+            <Route
+              exact
+              path="/article/jaringan-5g"
+              component={ArticleTeknologiScreen}
+            />
             <Route component={NotFoundScreen} />
           </Switch>
 

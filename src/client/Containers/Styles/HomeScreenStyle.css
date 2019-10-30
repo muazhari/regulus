@@ -81,17 +81,14 @@
 }
 
 #home-screen #our-team .carousel {
-  flex-direction: row;
-}
-
-#home-screen #our-team .carousel {
-  flex-direction: row;
+  flex-direction: column;
+  margin-block-start: 2%
 }
 
 #home-screen #our-team .carousel .slider .slide {
   display: flex;
-  /* flex: 1; */
-  flex-direction: row;
+  flex: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* width: 400px; */
@@ -104,6 +101,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ;
   /* overflow: hidden; */
   /* width: 300px;
   height: 300px; */
@@ -137,4 +135,37 @@
 #home-screen #our-team .carousel .slider .slide .description .quote {
   font-size: 130%;
   font-weight: normal;
+}
+
+#home-screen #our-team .carousel .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 40px;
+  margin-block-end: 3%
+}
+
+#home-screen #our-team .carousel .button .button-back {
+  display: contents;
+  justify-content: center;
+  align-items: center;
+  ;
+}
+
+#home-screen #our-team .carousel .button .button-back, #home-screen #our-team .carousel .button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#home-screen #our-team .carousel .button .button-back {
+  margin-inline-end: 100px;
+}
+
+#home-screen #our-team .carousel .button-next {
+  margin-inline-start: 100px;
+  background-color: none;
+  border-block-color: none;
 }

@@ -23,8 +23,11 @@ import riyanto from '../Assets/Images/riyanto.jpg'
 import jason from '../Assets/Images/jason.jpg'
 import karen from '../Assets/Images/karen.jpg'
 import michael from '../Assets/Images/michael.jpg'
-
+import zidane from '../Assets/Images/zidane.jpg'
 import carlos from '../Assets/Images/carlos.jpg'
+
+import william from '../Assets/Images/william.jpg'
+import fadhil from '../Assets/Images/fadhil.jpg'
 
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
@@ -36,7 +39,7 @@ const teamProfile = (index, image, name, quote) => {
       </div>
       <div className="description">
         <text className="name">{name}</text>
-        <text className="quote">{quote}</text>
+        {/* <text className="quote">{quote}</text> */}
       </div>
     </Slide>
   )
@@ -86,6 +89,21 @@ export default class App extends Component {
         name: 'Carlos',
         quote: 'halloo',
       },
+      {
+        image: zidane,
+        name: 'Zidane',
+        quote: 'halloo',
+      },
+      {
+        image: william,
+        name: 'William',
+        quote: 'halloo',
+      },
+      {
+        image: fadhil,
+        name: 'Fadhil',
+        quote: 'halloo',
+      },
     ]
 
     return (
@@ -99,10 +117,11 @@ export default class App extends Component {
             <img src={regulusLogo} alt="regulus" />
           </div>
           <div className="flex-cell col-6 description">
-            <text className="main">What is Regulus</text>
+            <text className="main">What is Regulus ?</text>
             <text className="sub">
-              Regulus is an project apprentice group, that aims to foster
-              students interests and talent in technology.
+              Regulus adalah sebuah kelompok Project Apprentice, yang bertujuan
+              untuk menyelesaikan Project Apprentice secara maksimal dan
+              mengumpulkannya tepat waktu.
             </text>
           </div>
         </div>
@@ -168,20 +187,23 @@ export default class App extends Component {
             naturalSlideHeight={37}
             totalSlides={teamData.length}
           >
-            <ButtonBack className="button-back">
-              <IoIosArrowBack />
-              Back
-            </ButtonBack>
             <Slider className="slider">
               {teamData &&
                 teamData.map((data, i) =>
                   teamProfile(i, data.image, data.name, data.quote)
                 )}
             </Slider>
-            <ButtonNext className="button-next">
-              Next
-              <IoIosArrowForward />
-            </ButtonNext>
+
+            <div className="button">
+              <ButtonBack className="reset-this button-back">
+                <IoIosArrowBack />
+                Back
+              </ButtonBack>
+              <ButtonNext className="reset-this button-next">
+                Next
+                <IoIosArrowForward />
+              </ButtonNext>
+            </div>
           </CarouselProvider>
         </div>
       </div>

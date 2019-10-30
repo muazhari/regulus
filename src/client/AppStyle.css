@@ -178,6 +178,14 @@ input[type=submit]:hover {
     background-color: rgb(48, 172, 177)
 }
 
+.reset-this {
+    backface-visibility: visible;
+    background: 0;
+    background-image: none;
+    background-size: auto auto;
+    border: 0;
+}
+
 /* 
 .carousel {
     padding: 0 30px;
